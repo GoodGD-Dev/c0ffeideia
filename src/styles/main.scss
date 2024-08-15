@@ -1,0 +1,102 @@
+// Definindo variáveis para cores
+$cor-principal: #000000;
+$cor-destaque: #9147ff;
+
+// Estilos gerais
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 5.6vw;
+  min-height: 80vh;
+  background-image: url(../images/Background.jpg);
+  text-align: center;
+  background-size: cover;
+  font-family: "IBM Plex Mono", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 80);
+  width: 300px;
+  border: solid 2px $cor-principal;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: $cor-principal;
+}
+
+.idea-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: $cor-principal;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid $cor-principal;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+button {
+  background-color: $cor-destaque;
+  color: $cor-principal;
+  border: 2px solid $cor-principal;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-top: 10px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 900;
+}
+
+button:hover {
+  background-color: darken($cor-destaque, 10%);
+}
+
+textarea {
+  padding: 10px;
+  border: 1px solid $cor-principal;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 100%;
+  min-height: 150px;
+  max-height: 150px;
+  resize: vertical;
+}
+
+input:focus {
+  outline: none;
+  border-color: #9147ff;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #9147ff;
+}
