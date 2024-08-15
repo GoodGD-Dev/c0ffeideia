@@ -9,17 +9,21 @@ $cor-destaque: #9147ff;
   box-sizing: border-box;
 }
 
-body {
+.background {
+  position: relative;
+  background-image: url(../images/Background.jpg);
+  background-size: cover;
+  height: 100vh;
   padding: 5.6vw;
   min-height: 80vh;
-  background-image: url(../images/Background.jpg);
-  text-align: center;
-  background-size: cover;
+  filter: blur(8);
+}
+.center {
+  position: absolute;
   font-family: "IBM Plex Mono", monospace;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
 
 .container {
@@ -60,6 +64,7 @@ textarea {
   border-radius: 4px;
   font-size: 1rem;
   width: 100%;
+  background-color: transparent;
 }
 
 button {
@@ -89,14 +94,10 @@ textarea {
   min-height: 150px;
   max-height: 150px;
   resize: vertical;
+  background-color: transparent;
 }
 
-input:focus {
-  outline: none;
-  border-color: #9147ff;
-}
-
+input:focus,
 textarea:focus {
   outline: none;
-  border-color: #9147ff;
 }
